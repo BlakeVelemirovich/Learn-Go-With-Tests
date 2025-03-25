@@ -5,9 +5,13 @@ import "fmt"
 const helloPrefix = "Hello, "
 
 func Hello(name string) string {
-  return helloPrefix + name
+  if (name == "") {
+    name = "world"
+  }
+
+	return helloPrefix + name
 }
 
 func main() {
-  fmt.Println(Hello("Blake"))
+	fmt.Println(Hello("Blake"))
 }
